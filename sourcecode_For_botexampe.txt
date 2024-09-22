@@ -1,0 +1,66 @@
+#note all the process are just to demonstarte the process i have created successfully the bot . like wise you can also use it by just changing  some codes
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "Hi, I am MyMovies bot. I can help you by fetching new movies.\n"
+        "Type the movie name along with a slash before it. I will fetch those for you.\n"
+        "Type /movieslist to see what are all the movies that i can find you "
+    )
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/Friendsgroupandnewmoviedownload')
+
+async def goatcmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/54')
+
+async def starcmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/53')
+async def demontecolony2cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/38')
+async def Aveshamcmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/31')
+async def Thangalaancmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/39')
+async def Ayalaancmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/16')
+async def Vikramcmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('https://t.me/c/2169683752/16')
+async def movieslistcmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("1./goat\n"
+                                    "2./star\n"
+                                    "3./demontecolony2\n"
+                                    "4./Avesham\n"
+                                    "5./Thangalaan\n"
+                                    "6./Ayalaan\n"
+                                    "7./Vikram\n"
+                                    "Type the movie name as it shown in the movies list aling / for example /moviename")
+                        
+    
+    text = update.message.text.strip()  
+    
+    if text in movie_links:
+        await update.message.reply_text(movie_links[text])
+    else:
+        await update.message.reply_text("Sorry, I am not programmed to answer such questions.")
+
+def main():
+    application = ApplicationBuilder().token("type-your-token-name").build()
+
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("help", help_command))
+    application.add_handler(CommandHandler("goat", goatcmd))
+    application.add_handler(CommandHandler("star", starcmd))
+    application.add_handler(CommandHandler("demontecolony2", demontecolony2cmd))
+    application.add_handler(CommandHandler("Avesham", Aveshamcmd))
+    application.add_handler(CommandHandler("Thangalaan",Thangalaancmd))
+    application.add_handler(CommandHandler("Ayalaan", Ayalaancmd))
+    application.add_handler(CommandHandler("Vikram", Vikramcmd))
+    application.add_handler(CommandHandler("movieslist", movieslistcmd))
+
+
+    application.run_polling()
+
+if __name__ == '__main__':
+    main()
