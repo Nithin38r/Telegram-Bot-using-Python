@@ -7,7 +7,8 @@ note all the process are just to demonstarte the process i have created successf
 
 Before going with the python code one important thing is 
 
-1.open telegram 
+1.open telegram
+
 2.type BotFather
 3.choose correct one
 4.type /start
