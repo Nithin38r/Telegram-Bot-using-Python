@@ -7,6 +7,10 @@ note all the process are just to demonstarte the process i have created successf
 
 Before going with the python code one important thing is 
 
+"type the following one in your cmd  (pip install python-telegram-bot)"
+
+"to check whether it is installed or not type (pip show python-telegram-bot)"
+
 1.open telegram
 
 2.type BotFather
