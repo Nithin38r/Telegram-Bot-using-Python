@@ -1,4 +1,5 @@
 # Telegram-Bot-using-Python
+"note i am just taken the movie bot as an example you can aslo create it like education bot , personal bot etc.........."
 I have created telegram bot using python
 
 note all the process are just to demonstarte the process i have created successfully the bot . like wise you can also use it by just changing  some codes
