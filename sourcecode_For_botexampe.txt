@@ -1,4 +1,4 @@
-#note all the process are just to demonstarte the process i have created successfully the bot . like wise you can also use it by just changing  some codes
+#note i am just taken the movie bot as an example you can aslo create it like education bot , personal bot etc..........
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
